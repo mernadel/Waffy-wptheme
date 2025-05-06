@@ -27,7 +27,7 @@ This section will be updated with specific font families, sizes, weights, and li
 **Root font-size is 62.5% (1rem = 10px).**
 
 *   **Headings (H1, H2, H3, H4, H5, H6):**
-    *   Font Family: 'Inter', sans-serif (placeholder)
+    *   Font Family: 'IBM Plex Arabic Sans', sans-serif 
     *   Color: Primarily Secondary Color (`#10212E`), Primary Color (`#1448B8`) for accents.
     *   **H1 Font Size:** 4.8rem (48px)
     *   **H2 Font Size:** 3.6rem (36px)
@@ -37,7 +37,7 @@ This section will be updated with specific font families, sizes, weights, and li
     *   **H6 Font Size:** 1.8rem (18px)
     *   Line Height: 1.2
 *   **Body Text:**
-    *   Font Family: 'Inter', sans-serif (placeholder)
+    *   Font Family: 'IBM Plex Arabic Sans', sans-serif 
     *   Color: `#333333`
     *   **Font Size:** 1.6rem (16px)
     *   Line Height: 1.6
