@@ -175,4 +175,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+require get_template_directory() . '/inc/enqueues/styles.php';
+require get_template_directory() . '/inc/enqueues/scripts.php';
+require_once get_template_directory() . '/inc/enqueues/acf.php';
 
