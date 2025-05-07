@@ -1,5 +1,5 @@
 <?php
-function theme_enqueue_styles() {
+function waffy_enqueue_component_styles() {
     // Remove Bootstrap CSS as we are using vanilla CSS with BEM
     // wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.3', 'all');
 
@@ -41,5 +41,5 @@ function theme_enqueue_styles() {
         _S_VERSION
     );
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'waffy_enqueue_component_styles', 20);
 ?>
