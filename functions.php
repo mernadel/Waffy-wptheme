@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'waffy_widgets_init' );
  * Enqueue scripts and styles.
  */
 function waffy_scripts() {
-	wp_enqueue_style( 'waffy-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'waffy-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css') );
 	wp_style_add_data( 'waffy-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'waffy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -178,4 +178,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/enqueues/styles.php';
 require get_template_directory() . '/inc/enqueues/scripts.php';
 require_once get_template_directory() . '/inc/enqueues/acf.php';
-

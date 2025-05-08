@@ -8,7 +8,7 @@ function waffy_enqueue_component_styles() {
         'waffy-home-hero',
         get_template_directory_uri() . '/css/home-hero.css',
         array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)
-        _S_VERSION // Use the theme version constant
+        filemtime(get_template_directory() . '/css/home-hero.css') // Use file modification time for versioning
     );
     wp_enqueue_style(
         'waffy-home-cta-form',
@@ -37,6 +37,12 @@ function waffy_enqueue_component_styles() {
     wp_enqueue_style(
         'waffy-home-seller-buyer-tab',
         get_template_directory_uri() . '/css/home-seller_buyer_tab.css',
+        array('waffy-style'),
+        _S_VERSION
+    );
+    wp_enqueue_style(
+        'waffy-fontawesome',
+        get_template_directory_uri() . '/css/fontawesome.css',
         array('waffy-style'),
         _S_VERSION
     );
