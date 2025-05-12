@@ -5,6 +5,18 @@ function waffy_enqueue_component_styles() {
 
     // Enqueue section-specific stylesheets
     wp_enqueue_style(
+        'waffy-owl-carousel',
+        get_template_directory_uri() . '/lib/owl-carousel/owl.carousel.min.css',
+        array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)
+        filemtime(get_template_directory() . '/lib/owl-carousel/owl.carousel.min.css') // Use file modification time for versioning
+    );
+    wp_enqueue_style(
+        'waffy-fontawesome',
+        get_template_directory_uri() . '/lib/fontawesome.css',
+        array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)
+        filemtime(get_template_directory() . '/lib/fontawesome.css') // Use file modification time for versioning
+    );
+    wp_enqueue_style(
         'waffy-home-hero',
         get_template_directory_uri() . '/css/home-hero.css',
         array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)

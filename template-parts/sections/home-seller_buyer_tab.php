@@ -1,5 +1,5 @@
   <!-- seller-buyer section start -->
-  <section class="seller-buyer container section-start" dir="rtl">
+  <section class="seller-buyer container section-start">
     <!-- section title -->
     <div class="seller-buyer__title ">
       <h2 class="main-hero__title1">
@@ -10,26 +10,26 @@
         <!-- Tab Menu -->
         <div class="tabs">
           <div role="tablist" aria-label="Programming Languages">
-       <div class="tab-buttons">
-        <button role="tab" aria-selected="true" id="seller_tab">
-          بائع
-        </button>
-        <button role="tab" aria-selected="false" id="buyer_tab">
-          مشتري
-        </button>
-        
+            <div class="tab-buttons">
+              <button role="tab" aria-selected="true" id="seller_tab">
+                بائع
+              </button>
+              <button role="tab" aria-selected="false" id="buyer_tab">
+                مشتري
+              </button>
 
-       </div>
+
+            </div>
             <!-- tabs divs starts -->
 
             <!-- Seller Tab Content -->
             <div role="tabpanel" aria-labelledby="seller_tab">
               <div class="tab-content__panel-inner">
                 <div class="tab-content__main">
-                <div class="tab-content__header mb-15">
-                  <h3 class="tab-content__title">أنت موثوق، مبيعاتك متزايدة</h3>
-                  <p class="home-hero__subtitle">مع وفّي تضمن ثقة عملائك وتعزز مصداقيتك</p>
-                </div>
+                  <div class="tab-content__header mb-15">
+                    <h3 class="tab-content__title">أنت موثوق، مبيعاتك متزايدة</h3>
+                    <p class="home-hero__subtitle">مع وفّي تضمن ثقة عملائك وتعزز مصداقيتك</p>
+                  </div>
                   <ul class="tab-content__feature-list">
                     <li class="tab-content__feature-item">
                       <img src="<?php echo get_template_directory_uri(); ?>/images/seller1.svg" class="feature-item__icon">
@@ -55,9 +55,11 @@
                 <div class="tab-content__aside">
                   <figure class="tab-content__aside-img">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/seller.webp" alt="مميزات البائع مع وفي">
-                    <div class="modal-button" id="three">
-
-                      <button class="three"><i class="fa-solid fa-play"></i></button>
+                    <div class="wrapper-pulse modal__trigger" data-modal="#seller">
+                      <div class="circle pulse"></div>
+                      <div class="circle modal-button" id="four">
+                        <i class="fa-solid fa-play"></i>
+                      </div>
                     </div>
                   </figure>
                 </div>
@@ -67,11 +69,11 @@
             <div role="tabpanel" aria-labelledby="buyer_tab" hidden>
               <div class="tab-content__panel-inner">
                 <div class="tab-content__main">
-                <div class="tab-content__header mb-15">
-                  <h3 class="tab-content__title"> أموال محفوظة .. جودة مضمونة
-                  </h3>
-                  <p class="home-hero__subtitle">مدفوعاتك محفوظة، حتى تستلم المنتج أو الخدمة               </p>
-                </div>
+                  <div class="tab-content__header mb-15">
+                    <h3 class="tab-content__title"> أموال محفوظة .. جودة مضمونة
+                    </h3>
+                    <p class="home-hero__subtitle">مدفوعاتك محفوظة، حتى تستلم المنتج أو الخدمة </p>
+                  </div>
                   <ul class="tab-content__feature-list">
                     <li class="tab-content__feature-item">
                       <img src="<?php echo get_template_directory_uri(); ?>/images/seller1.svg" class="feature-item__icon">
@@ -97,9 +99,11 @@
                 <div class="tab-content__aside">
                   <figure class="tab-content__aside-img">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/buyer.webp" alt="مميزات البائع مع وفي">
-                    <div class="modal-button" id="four">
-
-                      <button class="three"><i class="fa-solid fa-play"></i></button>
+                    <div class="wrapper-pulse modal__trigger" data-modal="#buyer">
+                      <div class="circle pulse"></div>
+                      <div class="circle modal-button">
+                        <i class="fa-solid fa-play"></i>
+                      </div>
                     </div>
                   </figure>
                 </div>
@@ -110,24 +114,57 @@
       </div>
     </div>
 
+  </section>
 
+  <!-- video modal container -->
+  <div id="seller" class="modal modal__bg" role="dialog" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ES7V5n9Rczg" tit le="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <a href="" class="modal__close demo-close">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
 
-
-
-
-
-    <!-- video modal container -->
-    <div id="modal-container">
-      <div class="modal-background">
-        <div class="modal">
-          <video width="100%" height="auto" controls autoplay>
-            <source src="https://www.youtube.com/watch?v=ES7V5n9Rczg" type="video/mp4"> <!-- I'll replace this src with your link -->
-            Your browser does not support the video tag.
-          </video>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- video modal buyer container -->
+  <div id="buyer" class="modal modal__bg p-0" role="dialog" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ES7V5n9Rczg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <a href="" class="modal__close demo-close">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- tabs script -->
   <script>
     const tab = document.querySelector('.tabs');
     const tabButtons = tab.querySelectorAll('[role="tab"]');
@@ -161,32 +198,174 @@
       button.addEventListener('click', tabClickHandler);
     })
   </script>
+
   <!-- modal script -->
-   <script>
-   const modalTriggerButton = document.querySelector(".modal-button"); 
-   const modalContainer = document.querySelector("#modal-container");
+  <script>
+    var Modal = (function () {
+      var trigger = $qsa(".modal__trigger"); // what you click to activate the modal
+      var modals = $qsa(".modal"); // the entire modal (takes up entire window)
+      var modalsbg = $qsa(".modal__bg"); // the entire modal (takes up entire window)
+      var content = $qsa(".modal__content"); // the inner content of the modal
+      var closers = $qsa(".modal__close"); // an element used to close the modal
+      var w = window;
+      var isOpen = false;
+      var contentDelay = 400; // duration after you click the button and wait for the content to show
+      var len = trigger.length;
 
-   if (modalTriggerButton) {
-     modalTriggerButton.addEventListener("click", function () {
-       const buttonId = this.getAttribute("id");
-       if (modalContainer) {
-         modalContainer.removeAttribute("class"); 
-         if (buttonId) {
-            modalContainer.classList.add(buttonId);
-         }
-         document.body.classList.add("modal-active");
-       }
-     });
-   }
+      // make it easier for yourself by not having to type as much to select an element
+      function $qsa(el) {
+        return document.querySelectorAll(el);
+      }
 
-   if (modalContainer) {
-     modalContainer.addEventListener("click", function (event) {
+      var getId = function (event) {
+        event.preventDefault();
+        var self = this;
+        // get the value of the data-modal attribute from the button
+        var modalId = self.dataset.modal;
+        var len = modalId.length;
+        // remove the '#' from the string
+        var modalIdTrimmed = modalId.substring(1, len);
+        // select the modal we want to activate
+        var modal = document.getElementById(modalIdTrimmed);
+        // execute function that creates the temporary expanding div
+        makeDiv(self, modal);
+      };
 
-       if (event.target === modalContainer || event.target.classList.contains('modal-background')) {
-         this.classList.add("out");
-         document.body.classList.remove("modal-active");
+      var makeDiv = function (self, modal) {
+        var fakediv = document.getElementById("modal__temp");
 
-       }
-     });
-   }
-   </script>
+
+        if (fakediv === null) {
+          var div = document.createElement("div");
+          div.id = "modal__temp";
+          self.appendChild(div);
+          moveTrig(self, modal, div);
+        }
+      };
+
+      var moveTrig = function (trig, modal, div) {
+        var trigProps = trig.getBoundingClientRect();
+        var m = modal;
+        var mProps = m.querySelector(".modal__content").getBoundingClientRect();
+        var transX, transY, scaleX, scaleY;
+        var xc = w.innerWidth / 2;
+        var yc = w.innerHeight / 2;
+
+        // this class increases z-index value so the button goes overtop the other buttons
+        trig.classList.add("modal__trigger--active");
+
+        // these values are used for scale the temporary div to the same size as the modal
+        scaleX = mProps.width / trigProps.width;
+        scaleY = mProps.height / trigProps.height;
+
+        scaleX = scaleX.toFixed(3); // round to 3 decimal places
+        scaleY = scaleY.toFixed(3);
+
+        // these values are used to move the button to the center of the window
+        transX = Math.round(xc - trigProps.left - trigProps.width / 2);
+        transY = Math.round(yc - trigProps.top - trigProps.height / 2);
+
+        // if the modal is aligned to the top then move the button to the center-y of the modal instead of the window
+        if (m.classList.contains("modal--align-top")) {
+          transY = Math.round(
+            mProps.height / 2 + mProps.top - trigProps.top - trigProps.height / 2
+          );
+        }
+
+        // translate button to center of screen
+        trig.style.transform = "translate(" + transX + "px, " + transY + "px)";
+        trig.style.webkitTransform = "translate(" + transX + "px, " + transY + "px)";
+        // expand temporary div to the same size as the modal
+        div.style.transform = "scale(" + scaleX + "," + scaleY + ")";
+        div.style.webkitTransform = "scale(" + scaleX + "," + scaleY + ")";
+
+        window.setTimeout(function () {
+          window.requestAnimationFrame(function () {
+            open(m, div);
+          });
+        }, contentDelay);
+      };
+
+      var open = function (m, div) {
+        if (!isOpen) {
+          // select the content inside the modal
+          var content = m.querySelector(".modal__content");
+          // reveal the modal
+          m.classList.add("modal--active");
+          // reveal the modal content
+          content.classList.add("modal__content--active");
+
+
+          content.addEventListener("transitionend", hideDiv, false);
+
+          isOpen = true;
+        }
+
+        function hideDiv() {
+          // fadeout div so that it can't be seen when the window is resized
+          div.style.opacity = "0";
+          content.removeEventListener("transitionend", hideDiv, false);
+        }
+      };
+
+      var close = function (event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        var target = event.target;
+        var div = document.getElementById("modal__temp");
+
+
+        if (
+          (isOpen && target.classList.contains("modal__bg")) ||
+          target.classList.contains("modal__close")
+        ) {
+          // make the hidden div visible again and remove the transforms so it scales back to its original size
+          div.style.opacity = "1";
+          div.removeAttribute("style");
+
+
+          for (var i = 0; i < len; i++) {
+            modals[i].classList.remove("modal--active");
+            content[i].classList.remove("modal__content--active");
+            trigger[i].style.transform = "none";
+            trigger[i].style.webkitTransform = "none";
+            trigger[i].classList.remove("modal__trigger--active");
+          }
+
+          // when the temporary div is opacity:1 again, we want to remove it from the dom
+          div.addEventListener("transitionend", removeDiv, false);
+
+          isOpen = false;
+        }
+
+        function removeDiv() {
+          setTimeout(function () {
+            window.requestAnimationFrame(function () {
+              // remove the temp div from the dom with a slight delay so the animation looks good
+              div.remove();
+            });
+          }, contentDelay - 50);
+        }
+      };
+
+      var bindActions = function () {
+        for (var i = 0; i < len; i++) {
+          trigger[i].addEventListener("click", getId, false);
+          closers[i].addEventListener("click", close, false);
+          modalsbg[i].addEventListener("click", close, false);
+        }
+      };
+
+      var init = function () {
+        bindActions();
+      };
+
+      return {
+        init: init
+      };
+    })();
+
+    Modal.init();
+
+  </script>

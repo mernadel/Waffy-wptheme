@@ -1,1 +1,71 @@
 /* CSS for home-featured_posts section */
+
+  /* slider section  */
+  
+  .owl-carousel .item.service-card {
+    background-color: #f8fafb;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex
+  ;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 315px;
+    justify-content: flex-start;
+  }
+  
+  .owl-carousel .item.service-card img {
+    max-width: 100%;
+    height: 235px;
+  
+    object-fit: contain;
+  
+    border-radius: 4px; 
+  }
+  
+  .owl-carousel .item.service-card .service-card__title {
+    font-size: 1.5rem; 
+    font-weight: 700;
+    color: var(--brand-secondary);
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  
+  .owl-carousel .item.service-card .service-card__subtitle {
+    font-size: 1rem;
+        color: #666;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-grow: 1;
+  }
+  
+  /* Adjustments for Owl Carousel navigation if needed */
+  .owl-theme .owl-nav {
+    margin-top: 20px;
+  }
+  
+  .owl-theme .owl-nav [class*='owl-'] {
+    font-size: 1.5rem;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #f0f0f0;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #333;
+  }
+  
+  .owl-theme .owl-nav [class*='owl-']:hover {
+    background: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* Ensuring the carousel container itself doesn't add unwanted padding/margins */
+  .slider {
+    padding-top: 20px; /* Add some space above the slider */
+    padding-bottom: 20px; /* Add some space below the slider */
+  }

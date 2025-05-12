@@ -1,1 +1,71 @@
 /* CSS for home-numbers section */
+
+/* Stats Section Styles */
+.stats-section {
+    background: linear-gradient(to bottom, #f0f7ff 0%, #fdfdff 70%, #fdfdff 100%);
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+  
+  
+  
+  .stat-box {
+    background-color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+  
+    display: flex
+  ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 110px;
+  }
+  
+  .stat-box__icon {
+    font-size: 2.6rem;
+    color: var(--brand-tertiary);
+  }
+  
+  .stat-box__number {
+    font-size: 2rem; 
+    font-weight: 700;
+    color: var(--brand-secondary);
+  margin: 0;
+  }
+  
+  .stat-box__text {
+    font-size: 1.25rem;
+    color: var(--body-color);
+  margin: 0;
+  }
+  
+  
+  /* Responsive adjustments for Stats Section */
+  
+  @media (min-width: 768px) {
+ 
+    
+  .stats-section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+  .stats-section__grid > .l-grid__col:not(:last-child) {
+    margin-bottom: 2rem; /* Spacing between stacked boxes on mobile */
+  }
+  .stat-box {
+    padding: 2rem 1.5rem;
+  }
+  .stat-box__number {
+    font-size: 2.4rem;
+  }
+  .stats-section__grid > .l-grid__col {
+    flex-basis: calc(33.333% - 2rem); 
+    max-width: calc(33.333% - 2rem);
+  }
+
+
+  }
+  
+  

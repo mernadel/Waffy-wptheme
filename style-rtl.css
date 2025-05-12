@@ -1,245 +1,324 @@
-/*!
-Theme Name: Waffy
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>Waffy</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: Waffy
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-Waffy is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
-
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
-
-/* Normalize
---------------------------------------------- */
-
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-	 ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
-}
-
-/* Sections
-	 ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
-
- 
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-Regular.ttf') format('truetype'); 
-    font-weight: 400; /* or normal */
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IBMPlexSansArabic';
-    src: url('fonts/IBMPlexSansArabic-Bold.ttf') format('truetype');
-    font-weight: 700; /* or bold */
-    font-style: normal;
-    font-display: swap;
-}
-
-
-
- *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* === Default Styles from style-guideline.md === */
-:root {
-    --brand-primary: #1448b8;
-    --brand-secondary: #10212e;
-    --brand-tertiary: #04d6d7;
-    --container-width: 1366px;
-    --section-padding-mobile: 2.5rem;
-    --section-padding-desktop: 5.6rem;
-    --container-padding-mobile: 1.6rem;
-    --container-padding-desktop: 2.8rem;
-    --headings-color: var(--brand-secondary);
-    --headings-accent-color: var(--brand-primary);
-    --body-font-family: "IBMPlexSansArabic", sans-serif;
-    --body-color: #404040;
-    --body-font-size: 1.6rem;
-    --body-line-height: 1.6;
-    --link-color: var(--brand-primary);
-    --link-hover-color: var(--brand-tertiary);
-  }
-  body {
-    font-family: var(--body-font-family);
-    color: var(--body-color);
-    background: #fdfdff;
-  
-    font-weight: 400;
-  }
-  
-  
-  
-  /* Global Styles */
-  
-  h1 {
-    font-size: 4.8rem;
-  } /* Guideline: 48px */
-  h2 {
-    font-size: 3.6rem;
-  } /* Guideline: 36px */
-  h3 {
-    font-size: 2.8rem;
-  } /* Guideline: 28px */
-  h4 {
-    font-size: 2.4rem;
-  } /* Guideline: 24px */
-  h5 {
-    font-size: 2rem;
-  } /* Guideline: 20px */
-  h6 {
-    font-size: 1.8rem;
-  } /* Guideline: 18px */
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .home-hero {
-    direction: rtl;
-    padding: 2.5rem 1rem;
-  }
-  
-  .home-hero__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .main-hero__title1 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 700;
-    margin: 15px auto;
-  }
-  
-  .section-start {
-    margin-top: var(--section-padding-desktop);
-  }
-  .home-hero__step-title-text {
-    font-size: 1.2rem;
-  }
-  
-  .home-hero__subtitle {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  .mb-15{
-    margin-bottom: 1.5rem;
-  }
-  
-  
-  
-  
-  
-
-.home-hero__cta-button {
-  background: var(--brand-primary);
-  color: #fff;
-  padding: 0.75rem 1.15rem;
-  border-radius: 8px;
-  font-size: 1.28rem;
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s;
+}
+@font-face {
+  font-family: "SiteFont";
+  src: url("fonts/IBMPlexSansArabic-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
-.home-hero__cta-button:hover {
-  background: var(--brand-secondary);
+/* === Default Styles from style-guideline.md === */
+:root {
+  --brand-primary: #1448b8;
+  --brand-secondary: #10212e;
+  --brand-tertiary: #04d6d7;
+  --container-width: 1366px;
+  --section-padding-mobile: 2.5rem;
+  --section-padding-desktop: 5.6rem;
+  --container-padding-mobile: 1.6rem;
+  --background-color: #f4f8f7;
+  --container-padding-desktop: 2.8rem;
+  --headings-font-family: "SiteFont", sans-serif;
+  --headings-color: var(--brand-secondary);
+  --headings-accent-color: var(--brand-primary);
+  --body-font-family: "SiteFont", sans-serif;
+  --body-color: #404040;
+  --body-font-size: 1.6rem;
+  --body-line-height: 1.6;
+  --link-color: var(--brand-primary);
+  --link-hover-color: var(--brand-tertiary);
+}
+body {
+  font-family: var(--headings-font-family);
+  color: var(--body-color);
+  background: #fdfdff;
+
+  font-weight: 400;
+}
+
+
+
+/* Global Styles */
+
+h1 {
+  font-size: 4.8rem;
+} /* Guideline: 48px */
+h2 {
+  font-size: 3.6rem;
+} /* Guideline: 36px */
+h3 {
+  font-size: 2.8rem;
+} /* Guideline: 28px */
+h4 {
+  font-size: 2.4rem;
+} /* Guideline: 24px */
+h5 {
+  font-size: 2rem;
+} /* Guideline: 20px */
+h6 {
+  font-size: 1.8rem;
+} /* Guideline: 18px */
+
+.text-center {
+  text-align: center;
+}
+.text-right{
+  text-align: right !important;
+}
+.home-hero {
+  direction: rtl;
+  padding: 2.5rem 1rem;
+}
+
+.home-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-hero__title1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 15px auto;
+}
+
+.section-start {
+  margin-top: var(--section-padding-desktop);
+}
+.home-hero__step-title-text {
+  font-size: 1.2rem;
+}
+
+.home-hero__subtitle {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.mb-15{
+  margin-bottom: 1.5rem;
+}
+
+.mt-40 {
+  margin-top: 4rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.p-0{
+  padding: 0;
+}
+.d-block{
+  display: block;
+}
+/* === Layout Utilities === */
+.l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Default gap, can be overridden */
+}
+
+.l-grid__col {
+  flex: 1 1 100%; /* Default: full width, allows shrinking/growing */
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive 2-column layout for medium screens and up */
+@media (min-width: 768px) {
+  .l-grid--2-cols-md > .l-grid__col {
+    flex-basis: calc(50% - 1rem); /* 2 columns, accounting for a 2rem gap */
+    max-width: calc(50% - 1rem);
+  }
+  .l-grid--2-cols-md.l-grid--gap-lg > .l-grid__col {
+    flex-basis: calc(50% - 1.5rem); /* Example with larger gap */
+    max-width: calc(50% - 1.5rem);
+  }
+  .l-grid--2-cols-md.l-grid--gap-sm > .l-grid__col {
+    flex-basis: calc(50% - 0.5rem); /* Example with smaller gap */
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+.l-grid--align-center {
+  align-items: center;
+}
+
+.l-grid--gap-lg {
+  gap: 3rem;
+}
+
+.l-grid--gap-sm {
+  gap: 1rem;
+}
+
+
+.form-control {
+  font-family: var(--body-font-family);
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--body-color);
+  background-color: transparent; 
+  background-clip: padding-box;
+  border: 1px solid #e0e0e0; 
+  border-radius: 15px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-align: right; 
+}
+
+.form-control:focus {
+  color: var(--body-color);
+  background-color: #ffffff;
+  border-color: var(--brand-primary);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(20, 72, 184, 0.25);
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  text-align: right; /* Ensure placeholder is also right-aligned */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  h1 { font-size: 3.2rem; } /* Proposed for mobile (32px) */
+  h2 { font-size: 2.6rem; } /* Proposed for mobile (26px) */
+  h3 { font-size: 2.2rem; } /* Proposed for mobile (22px) */
+  h4 { font-size: 2.0rem; } /* Proposed for mobile (20px) */
+  h5 { font-size: 1.8rem; } /* Proposed for mobile (18px) */
+  h6 { font-size: 1.6rem; } 
+
+
+ 
+
+
+
+
+
+  .main-hero__title1 ,  .start-selling__title {
+   font-size: 1.75rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom:15px;
+    text-align: center;
+  }
+  .home-hero__subtitle{
+    font-size: 1.2rem;
+  }
+  .home-hero__arrow-img{
+    height: 20px;
+  }
+
+
+
+  .start-selling__image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .start-selling__image-column {
+    margin-bottom: 2rem;
+  }
+  .start-selling__form-card {
+    padding: 2rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem; /* Guideline: 16px */
+    line-height: 1.6; /* Guideline body line-height */
+  }
+
+}
+
+/*  strart selling*/
+
+@media (max-width: 1000px) {
+  
+  .start-selling{
+    padding: var(--section-padding-mobile);
+  }
+.start-selling .container{
+  padding: 0;
+}
+}
+
+
+@media (max-width: 640px) {
+  .demo-btns .modal__trigger {
+    margin-bottom: 0.8rem;
+  }
 }
