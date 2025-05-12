@@ -42,11 +42,279 @@
   }
   
   
-  /* Responsive adjustments for Stats Section */
   
-  @media (min-width: 768px) {
- 
-    
+/* Intermediary CTA Section */
+.intermediary-cta-section {
+  background:linear-gradient(rgba(145, 176, 201, 0.2), rgba(241, 252, 227, 0.2) 80%);
+  padding-top: var(--section-padding-desktop);
+  padding-bottom: var(--section-padding-desktop);
+  overflow: hidden; 
+}
+
+.intermediary-cta-section__image-col {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.intermediary-cta-section__image {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.intermediary-cta-section__content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right; 
+}
+
+
+.intermediary-cta-section__title .accent-text {
+  color: var(--brand-primary); /* #1448B8 for the accented part */
+}
+
+
+.intermediary-cta-section__button {
+  align-self: flex-start; /* Aligns button to the right in RTL */
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.8rem;
+}
+
+
+
+
+
+.intermediary-cta-section {
+  background:linear-gradient(rgba(145, 176, 201, 0.2), rgba(241, 252, 227, 0.2) 80%);
+  padding-top: var(--section-padding-desktop);
+  padding-bottom: var(--section-padding-desktop);
+  overflow: hidden; 
+}
+
+.intermediary-cta-section__image-col {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.intermediary-cta-section__image {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.intermediary-cta-section__content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right; 
+}
+
+
+.intermediary-cta-section__title .accent-text {
+  color: var(--brand-primary); /* #1448B8 for the accented part */
+}
+
+
+.intermediary-cta-section__button {
+  align-self: flex-start; /* Aligns button to the right in RTL */
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.8rem;
+}
+
+
+
+/* faq question */
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid var(--brand-secondary);
+}
+.accordion-title{
+  font-size: 30px;
+    font-weight: 600;
+    font-family: var(--body-font-family);
+
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: right;
+  width: 100%;
+  padding: 1em 0;
+  color: #666;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: var(--brand-primary);
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+}
+
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 9px;
+  width:14px;  
+  height: 3px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 4px;
+  left: 14px;
+  width: 3px;
+  height: 14px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: var(--brand-secondary);
+}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 2em 0;
+  color: var(--brand-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive adjustments for Stats Section */
+
+  
+@media (max-width: 767px) {
+  .intermediary-cta-section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+
+  .intermediary-cta-section .l-grid--2-cols-md > .l-grid__col {
+     flex-basis: 100%; 
+     max-width: 100%;
+  }
+
+  .intermediary-cta-section__image-col {
+    order: 1; 
+    margin-bottom: 2rem;
+  }
+
+  .intermediary-cta-section__content-col {
+    order: 2; 
+    text-align: center; 
+  }
+
+  
+  .intermediary-cta-section__button {
+    align-self: center;
+    width: 100%; 
+    max-width: 320px; 
+  }
+  .intermediary-cta-section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+
+  .intermediary-cta-section .l-grid--2-cols-md > .l-grid__col {
+     flex-basis: 100%; 
+     max-width: 100%;
+  }
+
+  .intermediary-cta-section__image-col {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .intermediary-cta-section__content-col {
+    order: 2; 
+    text-align: center; 
+  }
+
+  .intermediary-cta-section__title {
+    font-size: 2.8rem; 
+  }
+
+  .intermediary-cta-section__text {
+    font-size: 1.5rem; 
+  }
+
+  .intermediary-cta-section__button {
+    align-self: center; 
+    width: 100%; 
+    max-width: 320px; 
+  }
+.accordion-title{
+  font-size: 22px;
+}
+}
+
+
+
+@media (min-width: 768px) {
+
   .stats-section {
     padding-top: var(--section-padding-mobile);
     padding-bottom: var(--section-padding-mobile);
@@ -66,6 +334,9 @@
   }
 
 
+  .stats-section__grid > .l-grid__col {
+    flex-basis: calc(33.333% - 2rem); 
+    max-width: calc(33.333% - 2rem);
   }
-  
-  
+
+}
