@@ -6,7 +6,7 @@
 
 .tab-content__panel-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 2.5rem; 
 }
 
@@ -293,11 +293,6 @@ font-size: 20px;
 .demo-btns .modal__trigger {
   margin-right: 3px;
 }
-@media (max-width: 640px) {
-  .demo-btns .modal__trigger {
-    margin-bottom: 0.8rem;
-  }
-}
 
 .demo-close {
   position: absolute;
@@ -327,32 +322,3 @@ font-size: 20px;
 }
 
 
-
-/* responsivness */
-@media (min-width: 768px) {
-
-  .tab-content__panel-inner {
-    flex-direction: row; 
-  }
-  .tab-content__aside {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-  }
-  .tab-content__main {
-    flex-basis: 55%; 
-  }
-  .tab-content__aside {
-    flex-basis: 45%;
-  }
-  .section-title {
-    font-size: 3.6rem; 
-  }
-
-}
-@media (max-width: 767px){
-  .tab-content__title{
-    font-size: 2rem;
-  }
-
-}

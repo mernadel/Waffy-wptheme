@@ -1,0 +1,27 @@
+/* CSS for Broker Page Header Section */
+
+
+.waffy-broker {
+    background: linear-gradient(
+      135deg,
+      #cefcff 13.72%,
+      rgba(255, 223, 194, 0.1) 75%
+    ) !important;
+  }
+  .iti__country {
+    font-size: 15px;
+  }
+  
+  .iti {
+    width: 100%;
+  }
+  
+  .waffy-broker .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .waffy-broker .form-group label {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+  

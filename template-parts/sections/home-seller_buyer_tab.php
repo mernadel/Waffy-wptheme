@@ -49,7 +49,7 @@
                     </li>
                   </ul>
                   <div class="home-hero__cta-container text-center">
-                    <a href="#" class="home-hero__cta-button">بيع الآن</a>
+                    <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'broker-program' ) ) ); ?>" class="home-hero__cta-button">بيع الآن</a>
                   </div>
                 </div>
                 <div class="tab-content__aside">
@@ -93,7 +93,7 @@
                     </li>
                   </ul>
                   <div class="home-hero__cta-container text-center">
-                    <a href="#" class="home-hero__cta-button">بيع الآن</a>
+                   <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'waffy-broker' ) ) ); ?>" class="home-hero__cta-button">بيع الآن</a>
                   </div>
                 </div>
                 <div class="tab-content__aside">

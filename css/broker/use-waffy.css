@@ -1,0 +1,18 @@
+.waffy-transactions .stat-box img{
+    width: 15%;
+}
+.waffy-transactions .stat-box .stat-box__text-container{
+text-align: right;   
+}
+.waffy-transactions .stat-box {
+  height: 115px;
+    padding: 20px 10px;
+    background: linear-gradient(
+      rgba(145, 176, 201, 0.2),
+      rgba(241, 252, 227, 0.2) 80%
+    );
+border: 1px solid #e6e6e6; 
+}
+.stats-section.waffy-transactions{
+  background: transparent;
+}

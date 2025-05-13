@@ -58,6 +58,41 @@ function waffy_enqueue_component_styles() {
         array('waffy-style'),
         _S_VERSION
     );
+
+    if ( is_page_template( 'page-waffy-broker.php' ) ) {
+        // Enqueue broker section specific stylesheets
+        wp_enqueue_style(
+            'waffy-broker-header-style',
+            get_template_directory_uri() . '/css/broker/broker-header.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/broker/broker-header.css' )
+        );
+  
+        wp_enqueue_style(
+            'waffy-broker-why-waffy-style',
+            get_template_directory_uri() . '/css/broker/why-waffy.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/broker/why-waffy.css' )
+        );
+        wp_enqueue_style(
+            'waffy-broker-use-waffy-style',
+            get_template_directory_uri() . '/css/broker/use-waffy.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/broker/use-waffy.css' )
+        );
+        wp_enqueue_style(
+            'waffy-broker-continue-your-work-style',
+            get_template_directory_uri() . '/css/broker/continue-your-work.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/broker/continue-your-work.css' )
+        );
+        wp_enqueue_style(
+            'waffy-broker-faq-broker-style',
+            get_template_directory_uri() . '/css/broker/faq-broker.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/broker/faq-broker.css' )
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'waffy_enqueue_component_styles', 20);
 ?>

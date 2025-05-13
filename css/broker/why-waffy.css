@@ -1,0 +1,32 @@
+/* CSS for Broker Why Waffy Section */
+
+
+.why-waffy__feature-box {
+    background: linear-gradient(
+      135deg,
+      #cefcff7d 13.72%,
+      rgba(255, 223, 194, 0.1) 75%
+    );
+    height: 220px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .why-waffy__icon {
+    width: 20%;
+  }
+  .why-waffy__feature-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .why-waffy  .tab-content__feature-item .feature-item__icon{
+  height: auto;
+  }
+  .why-waffy  .tab-content__feature-item .home-hero__step-title{
+    align-items: flex-start;
+  font-size: 24px;}
+  .why-waffy  .tab-content__feature-item .home-hero__step-title-text{
+    margin: 0 0 40px;
+  }
