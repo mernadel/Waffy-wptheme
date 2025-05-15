@@ -1,0 +1,84 @@
+/* CSS for Blog Page Template */
+
+.blog-section .tabs-nav {
+    
+    position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+  .blog-section .tabs-nav button {
+    font-family: var(--font-family-headings);
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+      margin: 0 20px;
+  }
+  
+  .blog-section .tabs-nav button.active {
+    font-weight: bold;
+    color: var(--brand-primary);
+  }
+  .blog-section .tab-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: var(--brand-primary);
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  /* === Tab Panels (Content Areas) === */
+  .blog-section .tabs-content .tab-content {
+    display: none;
+      padding: 25px 0
+  }
+  .blog-section .tabs-content .tab-content.active {
+    display: block;
+  }
+  
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure cards in a row have the same height */
+}
+
+
+.blog-card__image {
+  width: 100%;
+  height: 188px;
+  object-fit: cover;
+}
+
+.blog-card__content {
+  padding: 25px;
+  text-align: right; /* For RTL text */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to fill available space */
+}
+
+.blog-card__title {
+  font-size: 25px; /* H5 equivalent */
+
+  color: var(--brand-secondary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.blog-card__text {
+  font-size: 16px;
+
+  color: var(--text-color-body);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allows text to take available space before button */
+}
+.blog-card  .home-hero__cta-button{
+  font-size: 15px;
+}

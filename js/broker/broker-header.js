@@ -1,5 +1,11 @@
 // JS for Broker Page Header Section
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add any header specific JS interactions here
+    const input = document.querySelector("#phoneq");
+
+    intlTelInput(input, {
+        // i18n: ar,
+        initialCountry: "sa",
+        utilsScript: WaffyThemeData.templateDirectoryUri + '/lib/intl-tel/utils.js',
+    });
 });

@@ -5,10 +5,16 @@ function waffy_enqueue_component_styles() {
 
     // Enqueue section-specific stylesheets
     wp_enqueue_style(
-        'waffy-owl-carousel',
+        'waffy-owl-carousel', // Corrected handle
         get_template_directory_uri() . '/lib/owl-carousel/owl.carousel.min.css',
         array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)
         filemtime(get_template_directory() . '/lib/owl-carousel/owl.carousel.min.css') // Use file modification time for versioning
+    );
+    wp_enqueue_style(
+        'waffy-intl-tel-style', // Corrected and unique handle
+        get_template_directory_uri() . '/lib/intl-tel/intlTelInput.min.css',
+        array('waffy-style'), // Depends on the main stylesheet (handle from functions.php)
+        filemtime(get_template_directory() . '/lib/intl-tel/intlTelInput.min.css') // Use file modification time for versioning
     );
     wp_enqueue_style(
         'waffy-fontawesome',
@@ -91,6 +97,14 @@ function waffy_enqueue_component_styles() {
             get_template_directory_uri() . '/css/broker/faq-broker.css',
             array( 'waffy-style' ),
             filemtime( get_template_directory() . '/css/broker/faq-broker.css' )
+        );
+    }
+    elseif ( is_page_template( 'page-blog.php' ) ) {
+        wp_enqueue_style(
+            'waffy-page-blog-style',
+            get_template_directory_uri() . '/css/page-blog.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/page-blog.css' )
         );
     }
 }
