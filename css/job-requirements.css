@@ -1,0 +1,131 @@
+/* CSS for Job Requirements Page Template */
+
+/* ==========================
+   Job Detail Page Styles
+   ========================== */
+
+   .job-detail-section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: #f8f9fa; /* Light background for the details section */
+    border-radius: 8px;
+    margin-top: 3rem; /* Space from job listings */
+    text-align: left;
+ 
+  }
+  
+  .job-detail__header {
+    display: flex;
+flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .job-detail__back-link {
+    font-size: 1rem;
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    text-align: right !important;
+  }
+  
+  .job-detail__back-link i {
+    margin-right: 0.5rem; /* For LTR, adjust if icon is after text for RTL */
+  }
+  
+  .job-detail__back-link:hover {
+    color: var(--brand-tertiary);
+    text-decoration: underline;
+  }
+  
+  .job-detail__main-title {
+    font-size: 2.5rem; /* H2 size */
+    color: var(--brand-secondary);
+    font-weight: 700;
+    margin: 0;
+    text-align: center; /* Align title to the right */
+  }
+  
+  .job-detail__meta-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+  
+  .job-detail__meta-item {
+    font-size: 1.2rem;
+    color: var(--body-color);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .job-detail__meta-item strong {
+    color: var(--brand-secondary);
+    font-weight: 600;
+    margin-left: 0.5rem; /* For RTL, this puts space after the colon */
+  }
+  
+  .job-detail__content-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .job-detail__section-title {
+    font-size: 2rem; /* H4 size */
+    color: var(--brand-secondary);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    padding-bottom: 0.5rem;
+
+    display: inline-block; /* To make border only as long as text */
+  }
+  
+  .job-detail__text {
+    font-size: 1.2rem;
+    line-height: var(--body-line-height);
+    color: var(--body-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-detail__list {
+    list-style: none; /* Remove default bullets */
+    padding-right: 0; /* Remove default padding for RTL */
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-detail__list-item {
+    font-size: 1.2rem;
+    line-height: var(--body-line-height);
+    color: var(--body-color);
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem; /* Space for custom bullet */
+  }
+  
+  .job-detail__list-item::before {
+    content: "–"; /* Dash as a custom bullet */
+    position: absolute;
+    left: 0; /* Position bullet to the right for RTL */
+    top: 0;
+    color: var(--brand-primary);
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .job-detail__header {
+      flex-direction: column;
+      align-items: flex-end; /* Align items to the right */
+      gap: 1rem;
+    }
+    .job-detail__main-title {
+      font-size: 2.6rem; /* Slightly smaller for mobile */
+    }
+    .job-detail__section-title {
+      font-size: 2rem;
+    }
+  }
+  

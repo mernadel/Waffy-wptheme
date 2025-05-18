@@ -107,6 +107,30 @@ function waffy_enqueue_component_styles() {
             filemtime( get_template_directory() . '/css/page-blog.css' )
         );
     }
+    elseif ( is_page_template( 'single-blog.php' ) ) {
+        wp_enqueue_style(
+            'waffy-single-blog-style',
+            get_template_directory_uri() . '/css/single-blog.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/single-blog.css' )
+        );
+    }
+    elseif ( is_page_template( 'hiring.php' ) ) {
+        wp_enqueue_style(
+            'waffy-hiring-style',
+            get_template_directory_uri() . '/css/hiring.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/hiring.css' )
+        );
+    }
+    elseif ( is_page_template( 'job-requirements.php' ) ) {
+        wp_enqueue_style(
+            'waffy-job-requirements-style',
+            get_template_directory_uri() . '/css/job-requirements.css',
+            array( 'waffy-style' ),
+            filemtime( get_template_directory() . '/css/job-requirements.css' )
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'waffy_enqueue_component_styles', 20);
 ?>

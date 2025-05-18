@@ -1,0 +1,198 @@
+
+/* ==========================
+   Job Listings Section Styles
+   ========================== */
+
+   .job-listings-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .job-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef; /* Light border */
+    border-radius: 0.8rem; /* Consistent with other rounded elements */
+    padding: 2rem 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem; /* Gap between main flex items */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .job-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .job-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-item__meta-container {
+    display: flex;
+    align-items: center; /* Vertically align items if meta info is different heights */
+    gap: 2rem; /* Gap between department and experience columns */
+    flex-shrink: 0; /* Prevent shrinking */
+    /* min-width: 300px; Ensure some minimum width if needed */
+  }
+  
+  .job-item__department,
+  .job-item__experience {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem; /* Gap between icon and text */
+    color: #495057; /* Slightly darker grey for text */
+    text-align: center;
+  }
+  
+  .job-item__department i,
+  .job-item__experience i {
+    font-size: 1.2rem; /* Icon size */
+    color: var(--brand-secondary); /* Use secondary for icons initially */
+    width: 24px; /* Fixed width for icon alignment */
+    text-align: center;
+  }
+  
+  .job-item__meta-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+  }
+  
+  .job-item__meta-label { 
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 0.1rem;
+  }
+  
+  .job-item__meta-value { 
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--brand-secondary);
+  }
+  
+  .job-item__main-content {
+    flex-grow: 1; 
+    text-align: right; 
+    padding: 0 1.5rem; 
+  }
+  
+  .job-item__title {
+    font-size: 1.4rem; 
+    font-weight: 600;
+    color: var(--brand-secondary);
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+  
+  .job-item__details-link {
+    font-size: 1.2rem;
+    color: var(--brand-secondary);
+    text-decoration: none;
+    display: inline-flex; /* For icon alignment */
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .job-item__details-link:hover,
+  .job-item__details-link:focus {
+    color: var(--brand-primary);
+    text-decoration: none; 
+  }
+  
+  .job-item__details-link i {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .job-item__details-link:hover i {
+    transform: translateX(-3px);
+  }
+  
+  .job-item__action {
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+  
+  .job-item__apply-button {
+    padding: 0.9rem 2.2rem; /* Slightly adjusted padding */
+    font-size: 1.5rem; /* Slightly smaller font */
+    font-weight: 500;
+    min-width: 100px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  /* Responsive adjustments for Job Items */
+  @media (max-width: 991px) { /* Tablet and potentially larger phones */
+    .job-item {
+      flex-wrap: wrap;
+      padding: 1.5rem;
+    }
+    .job-item__meta-container {
+      order: 1;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      gap: 1.5rem; /* Adjust gap for wrapped layout */
+      justify-content: space-between; /* Spread out meta items */
+    }
+    .job-item__department,
+    .job-item__experience {
+      flex-grow: 1;
+      min-width: calc(50% - 1rem); /* Aim for two items per row in meta */
+    }
+    .job-item__main-content {
+      order: 2;
+      width: calc(100% - 130px); /* Title takes space minus button */
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .job-item__action {
+      order: 3;
+      width: 110px; /* Keep button width fixed or adapt as needed */
+      align-self: center; /* Center button if title section wraps differently */
+    }
+  }
+  .job-item__main-content{
+    display: flex;
+  }
+  .job-item__main-content img{
+    width: 75px;
+    height: 75px;
+    margin-left: 15px;
+  }
+  @media (max-width: 767px) { /* Mobile */
+    .job-item {
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the start (right in RTL) */
+    }
+    .job-item__meta-container {
+      order: 2; /* Meta after title on mobile */
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .job-item__department,
+    .job-item__experience {
+      min-width: 100%; /* Full width for each meta item */
+    }
+    .job-item__main-content {
+      order: 1; /* Title first on mobile */
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .job-item__action {
+      order: 3;
+      width: 100%; 
+    }
+    .job-item__apply-button {
+      width: 100%;
+    }
+  }
+  

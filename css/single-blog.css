@@ -1,0 +1,123 @@
+/* CSS for Single Blog Layout Template */
+/* ==========================
+   Single Blog Page Hero Styles
+   ========================== */
+
+  
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure cards in a row have the same height */
+}
+
+
+.blog-card__image {
+  width: 100%;
+  height: 188px;
+  object-fit: cover;
+}
+
+.blog-card__content {
+  padding: 25px;
+  text-align: right; /* For RTL text */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to fill available space */
+}
+
+
+   .single-blog-hero {
+    background-color: #121326;
+    color: #FFFFFF;
+    padding: 60px 0 150px;
+    text-align: right; 
+  }
+  
+  .single-blog-hero__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+  }
+  
+  .single-blog-hero__text-meta {
+    flex-basis: 60%; 
+    min-width: 300px; 
+  }
+  
+  .single-blog-hero__title {
+    font-family: var(--font-family-headings);
+    font-size: 3rem; 
+    font-weight: bold;
+   
+    margin-bottom: 15px;
+  }
+  
+  .single-blog-hero__meta {
+  
+    font-size: 1.3rem; 
+    color: #E0E0E0; 
+    margin-bottom: 0;
+  }
+  
+  .single-blog-hero__share {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-basis: 35%; 
+    justify-content: flex-start; 
+    min-width: 250px;
+  }
+  
+  .single-blog-hero__share-text {
+    font-size: 1.3rem;
+  }
+  
+  .single-blog-hero__social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .single-blog-hero__social-icons li a {
+    color: #FFFFFF;
+    font-size: 15px; 
+    border: 1px solid #FFFFFF;
+    border-radius: var(--border-radius-sm, 4px);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .single-blog-hero__social-icons li a:hover,
+  .single-blog-hero__social-icons li a:focus {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #FFFFFF;
+  }
+  .single-blog-section{
+    margin-top: -100px;
+    
+  }
+  .single-blog-section .blog-card__title{
+  font-size: 30px;
+  text-align: center;
+  }
+  .single-blog-section .blog-card{
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  .single-blog-section .blog-card__image{
+    height: 300px;
+  }
