@@ -4,7 +4,7 @@
       <div class="l-grid l-grid--2-cols-md l-grid--align-center l-grid--gap-lg">
         <div class="l-grid__col start-selling__content-column">
           <h2 class="start-selling__title"> <span>ابدأ أول عملية بيع في</span> أقل من 60 ثانية</h2>
-          <p class="shome-hero__subtitle">معاملاتك محمية تمامًا، زوّد مبيعاتك، واكسب ثقة عملائك</p>
+          <p class="home-hero__subtitle">معاملاتك محمية تمامًا، زوّد مبيعاتك، واكسب ثقة عملائك</p>
           <div class="start-selling__form-card">
             <form class="start-selling__form">
               <div class="form-group">

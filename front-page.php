@@ -6,5 +6,6 @@ require get_template_directory() . '/template-parts/sections/home-cta_form.php';
 require get_template_directory() . '/template-parts/sections/home-featured_posts.php';
 require get_template_directory() . '/template-parts/sections/home-numbers.php';
 require get_template_directory() . '/template-parts/sections/home-cta_signup.php';
+require get_template_directory() . '/template-parts/sections/newsletter.php';
 ?>
 <?php get_footer(); ?>

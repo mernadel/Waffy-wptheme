@@ -59,5 +59,14 @@ function theme_enqueue_scripts() {
             true // Load in footer
         );
     }
+    elseif ( is_front_page() ) {
+        wp_enqueue_script(
+            'waffy-home-numbers-script',
+            get_template_directory_uri() . '/js/home-numbers.js',
+            array(), // No dependencies for now
+            filemtime( get_template_directory() . '/js/home-numbers.js' ),
+            true // Load in footer
+        );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );

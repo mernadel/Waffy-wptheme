@@ -19,6 +19,7 @@ get_header();
 		get_template_part( 'template-parts/broker/why-waffy' );
 		get_template_part( 'template-parts/broker/use-waffy' );
 		get_template_part( 'template-parts/broker/continue-your-work' );
+
 		get_template_part( 'template-parts/broker/faq-broker' );
 		?>
 

@@ -53,6 +53,12 @@ function waffy_enqueue_component_styles() {
         _S_VERSION
     );
     wp_enqueue_style(
+        'waffy-home-newsletter',
+        get_template_directory_uri() . '/css/newsletter.css',
+        array('waffy-style'),
+        _S_VERSION
+    );
+    wp_enqueue_style(
         'waffy-home-seller-buyer-tab',
         get_template_directory_uri() . '/css/home-seller_buyer_tab.css',
         array('waffy-style'),

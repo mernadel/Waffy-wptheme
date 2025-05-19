@@ -334,7 +334,6 @@ h6 {
 .home-hero__cta-button:hover {
   background: var(--brand-secondary);
 }
-
 /* Responsive: horizontal steps on desktop */
 @media (min-width: 770px) and (max-width: 1014px) {
   .home-hero__steps-row {
@@ -345,6 +344,11 @@ h6 {
   }
 }
 @media (max-width: 768px) {
+  
+html {
+  font-size: 90%; /* 1rem = 10px */
+}
+
   /* Global styles */
   .section-start {
     margin-top: var(--section-padding-mobile);
