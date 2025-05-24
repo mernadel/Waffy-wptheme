@@ -29,7 +29,6 @@
   src: url("fonts/IBMPlexSansArabic-Medium.ttf") format("truetype");
   font-weight: 500;
 }
-
 @font-face {
   font-family: "SiteFont";
   src: url("fonts/IBMPlexSansArabic-SemiBold.ttf") format("truetype");
